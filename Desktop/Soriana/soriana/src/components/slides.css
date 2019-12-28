@@ -48,7 +48,7 @@
   .backgroundImage .imageText{
     position: absolute;
     color: white;
-   outline: 3px solid rgb(7, 153, 63);
+   outline: 1px solid rgb(178, 189, 182);
     text-align: center;
     padding: 10px;
   }

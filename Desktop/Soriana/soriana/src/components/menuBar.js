@@ -32,7 +32,7 @@ class Menu extends React.Component {
      <div className="nav-items">
        <ul>
          <Link to="Login"><li>Login</li></Link>
-         <Link to ="SignUp"> <li>SignUp</li></Link>
+         <Link to="SignUp"><li>SignUp</li></Link>
          <Link to="help"><li>help</li></Link>
          
        </ul>

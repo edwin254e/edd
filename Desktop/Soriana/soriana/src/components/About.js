@@ -6,7 +6,7 @@ import { Slide } from 'react-slideshow-image';
 
 
  
-const Slideshow = () => {
+const About= () => {
     const properties = {
         duration: 5000,
         transitionDuration: 500,
@@ -23,30 +23,9 @@ const Slideshow = () => {
       ];
        
     return (
-      <div className="slide-container">
-        <Slide {...properties}>
-          <div className="each-slide">
-              <div className="backgroundImage">
-              <img src={mybg}></img>
-              </div>
-            
-              <span>Slide 1</span>
-            </div>
-        
-          <div className="each-slide">
-          <div className="backgroundImage">
-              <img src={mybg}></img>
-              </div>
-              <span>Slide 2</span>
-            </div>
-        
-          <div className="each-slide">
-            <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
-              <span>Slide 3</span>
-            </div>
-          </div>
-        </Slide>
+      <div className="container">
+      <p>Welcome to about us page</p>
       </div>
     )
 }
-export default Slideshow;
+export default About;

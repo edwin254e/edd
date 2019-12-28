@@ -15,9 +15,14 @@ body {
 nav {
   min-height: 10vh;
   color: #520b0b;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
@@ -42,12 +47,18 @@ nav .nav-items ul li {
   margin-top: 10px;
   font-size: 1rem;
   margin-bottom: 20px;
+  color: #0f0707;
 }
 
 .topNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 10vh;
   background: tomato;
   color: white;
@@ -83,6 +94,30 @@ nav .nav-items ul li {
   border: 1px #ebe4e4 solid;
   color: white;
   position: relative;
+}
+
+.topNav form ::-webkit-input-placeholder {
+  color: #ece1e1;
+  font-size: 1.2rem;
+  font-family: cambria;
+  text-align: center;
+  opacity: .5;
+}
+
+.topNav form :-ms-input-placeholder {
+  color: #ece1e1;
+  font-size: 1.2rem;
+  font-family: cambria;
+  text-align: center;
+  opacity: .5;
+}
+
+.topNav form ::-ms-input-placeholder {
+  color: #ece1e1;
+  font-size: 1.2rem;
+  font-family: cambria;
+  text-align: center;
+  opacity: .5;
 }
 
 .topNav form ::placeholder {
@@ -128,21 +163,29 @@ nav .nav-items ul li {
 }
 
 .footer {
-  grid-row-start: 2;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
   grid-row-end: 3;
 }
 
 .showCAse {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   margin-bottom: 20px;
   grid-gap: 20px;
 }
 
 .showCAse .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   position: relative;
   text-align: center;
 }
@@ -163,7 +206,8 @@ nav .nav-items ul li {
   color: white;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .showCAse .slider .homeText p {
@@ -191,11 +235,17 @@ nav .nav-items ul li {
 }
 
 .products .shopMore {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background: tomato;
   color: #ffff;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 2px 15px 2px 15px;
   margin-top: 10px;
 }
@@ -218,18 +268,24 @@ nav .nav-items ul li {
 }
 
 .products .myProducts {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   padding: 10px;
-  align-items: center;
-  align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .products .myProducts .productDetails {
   padding: 10px;
   width: 100%;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .products .myProducts .productDetails:hover {
@@ -242,8 +298,12 @@ nav .nav-items ul li {
 }
 
 .products .myProducts .productDetails .addCart {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 10px;
 }
 
@@ -270,12 +330,17 @@ nav .nav-items ul li {
 
 @media (max-width: 768px) {
   .myProducts {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(2, 1fr) !important;
+    -ms-grid-columns: (1fr)[2] !important;
+        grid-template-columns: repeat(2, 1fr) !important;
     grid-gap: 20px;
     padding: 20px;
-    align-items: center;
-    align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
   }
   .topNav {
     display: none;
@@ -284,12 +349,17 @@ nav .nav-items ul li {
 
 @media (max-width: 411px) {
   .myProducts {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr !important;
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
     grid-gap: 20px;
     padding: 20px;
-    align-items: center;
-    align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
   }
   .topNav {
     display: none;
@@ -297,17 +367,32 @@ nav .nav-items ul li {
 }
 
 .mySlidez {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .mySlidez .sideBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px;
   height: 400px;
 }
+/*# sourceMappingURL=custom.css.map */

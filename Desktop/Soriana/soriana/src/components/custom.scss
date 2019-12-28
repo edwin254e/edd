@@ -1,0 +1,317 @@
+@mixin ul-styles {
+    margin: 0;
+    padding: 0;
+}
+@mixin list-tyles {
+    display: inline-block;
+    list-style: none;
+    padding: 0 20px 0 20px;
+    margin-top: 10px;
+}
+$themeColor:rgb(243, 241, 240);
+
+*{
+    margin:0;
+    padding:0;
+}
+html,body{
+    height: 100%;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    min-height: 100%;
+  
+}
+nav{
+    min-height: 10vh;
+    color: rgb(82, 11, 11);
+    display:  flex;
+   justify-content: space-around;
+   align-items: center;
+   text-align: center;
+   .myLogo{
+       cursor: pointer;
+       img{
+           width: 10rem;
+           height: auto;
+
+
+       }
+   }
+ 
+  .nav-items{
+  
+       
+             
+            
+         
+    
+      ul{
+          @include ul-styles;
+          li{
+              @include list-tyles;
+              font-size: 1rem;
+              margin-bottom: 20px;
+          }
+      }
+  }
+}
+
+.topNav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background: tomato;
+    color: white;
+    select{
+        background: transparent;
+        padding: 10px;
+        border: none;
+        color: rgb(243, 235, 235);
+        font-family: cambria;
+        font-size: 1.2rem;
+        outline: none;
+       option{
+           color: rgb(7, 1, 1);
+           text-align: center;
+           background: tomato;
+          
+       }
+
+    }
+    form{
+        width: 100%;
+        input[type=text]{
+            background: transparent;
+            border-radius: 8px;
+        width: 500px;
+            margin-right: 5px;
+            outline: none;
+            padding: 8px;
+            border: 1px rgb(235, 228, 228) solid;
+            color: rgb(255, 255, 255);
+            position: relative;
+        }
+        ::placeholder{
+            color: rgb(236, 225, 225);
+            font-size: 1.2rem;
+            font-family: cambria;
+            text-align: center;
+            opacity: .5;
+        }
+        button{
+            padding: 8px;
+            text-align: center;
+            border: none;
+            position: absolute;
+            border-radius: 8px;
+            background: rgb(214, 54, 5);
+            outline: none;
+            cursor: pointer;
+            color: white;
+            font-family: cambria;
+            font-size: 1.2rem;
+            width: 100px;
+            
+        }
+    }
+    .topIcons{
+        ul{
+            @include ul-styles();
+            li{
+                @include list-tyles();
+            }
+        }
+    }
+}
+.navItems{
+    @include list-tyles();
+}
+
+
+.footer{
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.showCAse{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 20px;
+    grid-gap: 20px;
+    .slider{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+   position: relative;
+   text-align: center;
+        &::before{
+            content: "";
+            width: 100%;
+            height: 100%;
+           position: absolute;
+           top: 0;
+           left: 0;
+           background: rgb(3, 138, 64);
+           opacity: .5;
+        }
+        .homeText{
+            position: absolute;
+            color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            p{
+                font-size: 1.5rem;
+                color: rgb(253, 253, 253);
+                font-weight: 400;
+            }
+            h1{
+                font-size: 4rem;
+                font-family: verdana;
+                font-weight: bold;
+                text-shadow: 2px 4px rgb(180, 168, 168);
+                color: tomato;
+            }
+        }
+    }
+   
+    .show-right{
+        background: yellow;
+      
+    }
+    
+}
+.products{
+
+    
+    h3{
+        font-size: 1.4rem;
+        font-family: arial;
+        text-align: center;
+    }
+    .shopMore{
+        display: flex;
+        justify-content: space-between;
+        background: tomato;
+        color: #ffff;
+        align-items: center;
+        padding: 2px 15px 2px 15px;
+        margin-top: 10px;
+&:nth-child(odd){
+    background: rgb(221, 118, 0);
+}
+        a{
+            background: transparent;
+            border: none;
+            text-decoration: none;
+            font-size: 1rem;
+            color: #ffff;
+            text-transform: uppercase;
+            &:hover{
+                color: rgb(109, 99, 99);
+            }
+        }
+    }
+    .myProducts{
+    
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 20px;
+        padding: 10px;
+        align-items: center;
+        align-content: center;
+        
+       
+        .productDetails{
+            padding: 10px;
+        width: 100%;
+        align-content: center;
+        
+        &:hover{
+            outline: .6px solid rgb(240, 233, 231);
+          
+        }
+           
+            img{
+                width: 100%;
+                height: auto;
+            }
+           
+            .addCart{
+              
+    
+                display: flex;
+                justify-content: space-between;
+                padding:  10px;
+                .showNumber{
+                    background: rgb(245, 245, 240);
+                    outline: none;
+                    border: 2px solid tomato;
+                    padding: 2px;
+                    font-size: .8rem;
+                    color: rgb(233, 74, 12);
+                    font-weight: bold;
+                    font-family: helvetica;
+                    
+                }
+            span{
+                color: rgb(5, 107, 68);
+                font-family: cambria;
+                &:hover{
+                    color: black;
+                    text-decoration: underline;
+                }
+            }
+            }
+           
+       
+    }
+}
+}
+@media (max-width:768px){
+    .myProducts{
+    
+        display: grid;
+        grid-template-columns: repeat(2,1fr) !important;
+        grid-gap: 20px;
+        padding: 20px;
+        align-items: center;
+        align-content: center;}
+        .topNav{
+            display: none;
+        }
+
+}
+@media (max-width:411px){
+    .myProducts{
+    
+        display: grid;
+        grid-template-columns: 1fr !important;
+        grid-gap: 20px;
+        padding: 20px;
+        align-items: center;
+        align-content: center;}
+        .topNav{
+            display: none;
+        }
+
+}
+
+.mySlidez{
+display: flex;
+justify-content: space-around;
+align-items: center;
+.sideBox{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    height: 400px;
+  
+    
+}
+}
